@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Component, Fragment } from "react";
+import { Route, Switch } from "react-router";
+import User from "./Component/User/User";
+import AuthPage from "./Component/AuthPage/AuthPage";
+import { connect } from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <div>
+          <Switch>
+            {this.props.UserDetail !== null && (
+              <Route path="/user" component={User} />
+            )}
+            <Route path="/" component={AuthPage} />
+          </Switch>
+        </div>
+      </Fragment>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    UserDetail: state,
+  };
+};
+
+export default connect(mapStateToProps, null)(App);

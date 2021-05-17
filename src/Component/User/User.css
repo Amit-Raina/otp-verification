@@ -1,0 +1,10 @@
+.user-box{
+    position: absolute;
+    top: 15%;
+    left:30%;
+    padding:30px;
+    box-shadow: 0 0 8px green;
+}
+.user-box h2{
+    text-align: center;
+}
