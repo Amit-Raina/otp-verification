@@ -1,12 +1,12 @@
 import firebase from 'firebase';
 
 const config = {
-    apiKey: "AIzaSyAeaz7KxcoUjt2pHJwAw4Lv4d6fniBe3xE",
-    authDomain: "otp-demo-327ff.firebaseapp.com",
-    projectId: "otp-demo-327ff",
-    storageBucket: "otp-demo-327ff.appspot.com",
-    messagingSenderId: "826537557299",
-    appId: "1:826537557299:web:56a8ac85f50dd4b2c81246"
+    apiKey: "AIzaSyDPPQSyawt2ujrNfcHd7QNaHJMiClTyGNU",
+    authDomain: "otp-project-fcd59.firebaseapp.com",
+    projectId: "otp-project-fcd59",
+    storageBucket: "otp-project-fcd59.appspot.com",
+    messagingSenderId: "936292953081",
+    appId: "1:936292953081:web:aa1e6ed938e1c26d58eb28"
 }
 
 firebase.initializeApp(config)
